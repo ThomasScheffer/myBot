@@ -9,11 +9,9 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
   if (message.content.startsWith("ping")) {
-    blizzard.wow.character(['profile'], { origin: 'us', realm: 'amanthul', name: 'charni' })
-      .then(response => {
-        console.log(response.data);
-        message.channel.send(response.data);
-      });
+
+        message.channel.send("pong!");
+
     }
 });
 
